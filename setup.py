@@ -8,32 +8,31 @@ if sys.version_info[:3] < (3, 6, 1):
     raise Exception("websockets requires Python >= 3.6.1.")
 
 
-setup(name='cgxsh',
+setup(name='prisma-sh',
       version='0.0.1b1',
-      description='Command-line access to the controller-based CloudGenix ION Troubleshooting Toolkit.',
+      description='`Command-line access to the controller-based Prisma SD-WAN ION Troubleshooting Toolkit.`',
       long_description=long_description,
       long_description_content_type='text/markdown',
-      url='https://github.com/ebob9/cgxsh',
+      url='https://github.com/ebob9/prisma-sh',
       author='Aaron Edwards',
-      author_email='cgxsh@ebob9.com',
+      author_email='prisma-sh@ebob9.com',
       license='MIT',
       install_requires=[
-            'cloudgenix >= 5.2.1b1',
+            'cloudgenix >= 6.1.1b1',
             'fuzzywuzzy >= 0.17.0',
             'pyyaml >= 3.13'
       ],
-      packages=['cgxsh_lib'],
+      packages=['prisma_sh_lib'],
       classifiers=[
             "Development Status :: 4 - Beta",
             "Intended Audience :: End Users/Desktop",
             "License :: OSI Approved :: MIT License",
-            "Programming Language :: Python :: 3.6",
-            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.10"
       ],
-      python_requires='>=3.6.1',
+      python_requires='>=3.10.1',
       entry_points={
             'console_scripts': [
-                  'cgxsh = cgxsh_lib:toolkit_client',
+                  'prisma-sh = prisma_sh_lib:toolkit_client',
             ]
       },
       )
